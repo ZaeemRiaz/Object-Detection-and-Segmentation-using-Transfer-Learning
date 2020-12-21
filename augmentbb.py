@@ -19,7 +19,8 @@ def generate_new_name(temp):
 
 
 start = '28'
-path = 'Dataset/pak cnic/images'
+main_path = 'Dataset/pak cnic/'
+path = main_path + 'original'
 for img_file in glob.glob(path + '/*.jpg'):
     image = Image.open(img_file)
     img = asarray(image)
@@ -97,15 +98,15 @@ for img_file in glob.glob(path + '/*.jpg'):
 
             im = Image.fromarray(img_aug)
             im = im.convert('RGB')
-            im.save("Dataset/pak cnic/augmented/" + filename_save + ".jpeg")
+            im.save(main_path + 'augmented/' + filename_save + ".jpg")
 
-            label_file_write = 'Dataset/pak cnic/augmented/' + filename_save + '.xml'
+            label_file_write = main_path + 'augmented/' + filename_save + '.xml'
 
             annotation_tag = ET.Element('annotation')
 
             # write filename to tree
             filename_tag = ET.SubElement(annotation_tag, 'filename')
-            filename_tag.text = filename_save + ".jpeg"
+            filename_tag.text = filename_save + ".jpg"
 
             # write size to tree
             size_tag = ET.SubElement(annotation_tag, 'size')
