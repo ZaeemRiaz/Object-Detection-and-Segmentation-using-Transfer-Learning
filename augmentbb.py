@@ -1,8 +1,9 @@
-from bbaug import policies
-from PIL import Image
-from numpy import asarray
-import xml.etree.ElementTree as ET
 import glob
+import xml.etree.ElementTree as ET
+
+from PIL import Image
+from bbaug import policies
+from numpy import asarray
 
 class_name_dict = {
     0: 'First Name',
@@ -17,8 +18,8 @@ def generate_new_name(temp):
     return str(int(temp) + 1)
 
 
-start = '1'
-path = 'dataset/'
+start = '28'
+path = 'Dataset/pak cnic/images'
 for img_file in glob.glob(path + '/*.jpg'):
     image = Image.open(img_file)
     img = asarray(image)
@@ -96,9 +97,9 @@ for img_file in glob.glob(path + '/*.jpg'):
 
             im = Image.fromarray(img_aug)
             im = im.convert('RGB')
-            im.save("training/" + filename_save + ".jpeg")
+            im.save("Dataset/pak cnic/augmented/" + filename_save + ".jpeg")
 
-            label_file_write = 'training/' + filename_save + '.xml'
+            label_file_write = 'Dataset/pak cnic/augmented/' + filename_save + '.xml'
 
             annotation_tag = ET.Element('annotation')
 
@@ -114,12 +115,12 @@ for img_file in glob.glob(path + '/*.jpg'):
             width_tag.text, height_tag.text, depth_tag.text = size
 
             # iterate through all bounding boxes and add to tree
-            for i in range(len(class_name_list)):
+            for i in range(len(class_name_list2)):
                 object_tag = ET.SubElement(annotation_tag, 'object')
 
                 # replace class_name_list with modified version
                 name_tag = ET.SubElement(object_tag, 'name')
-                name_tag.text = class_name_list[i]
+                name_tag.text = class_name_list2[i]
 
                 # replace bnd_box_list with modified version
                 bnd_box_tag = ET.SubElement(object_tag, 'bndbox')
@@ -127,10 +128,10 @@ for img_file in glob.glob(path + '/*.jpg'):
                 ymin_tag = ET.SubElement(bnd_box_tag, 'ymin')
                 xmax_tag = ET.SubElement(bnd_box_tag, 'xmax')
                 ymax_tag = ET.SubElement(bnd_box_tag, 'ymax')
-                xmin_tag.text = str(bnd_box_list[i][0])
-                ymin_tag.text = str(bnd_box_list[i][1])
-                xmax_tag.text = str(bnd_box_list[i][2])
-                ymax_tag.text = str(bnd_box_list[i][3])
+                xmin_tag.text = str(bnd_box_list2[i][0])
+                ymin_tag.text = str(bnd_box_list2[i][1])
+                xmax_tag.text = str(bnd_box_list2[i][2])
+                ymax_tag.text = str(bnd_box_list2[i][3])
 
             # create element tree to export as xml
             tree = ET.ElementTree(annotation_tag)

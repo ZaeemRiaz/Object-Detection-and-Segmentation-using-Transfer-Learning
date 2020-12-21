@@ -1,0 +1,1 @@
+<annotation><filename>1750.jpeg</filename><size><width>400</width><height>257</height><depth>3</depth></size><object><name>First Name</name><bndbox><xmin>112</xmin><ymin>201</ymin><xmax>177</xmax><ymax>227</ymax></bndbox></object><object><name>Last Name</name><bndbox><xmin>114</xmin><ymin>252</ymin><xmax>232</xmax><ymax>256</ymax></bndbox></object></annotation>
