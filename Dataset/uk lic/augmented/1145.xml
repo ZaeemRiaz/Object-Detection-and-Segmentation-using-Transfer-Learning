@@ -1,0 +1,1 @@
+<annotation><filename>1145.jpg</filename><size><width>648</width><height>394</height><depth>3</depth></size><object><name>ID Number</name><bndbox><xmin>207</xmin><ymin>0</ymin><xmax>421</xmax><ymax>80</ymax></bndbox></object><object><name>Address</name><bndbox><xmin>204</xmin><ymin>28</ymin><xmax>576</xmax><ymax>184</ymax></bndbox></object></annotation>
