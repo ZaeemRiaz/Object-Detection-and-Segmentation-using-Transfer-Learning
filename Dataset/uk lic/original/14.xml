@@ -1,7 +1,7 @@
 <annotation>
 	<folder>my-project-name</folder>
-	<filename>16.jpg</filename>
-	<path>/my-project-name/16.jpg</path>
+	<filename>14.jpg</filename>
+	<path>/my-project-name/14.jpg</path>
 	<source>
 		<database>Unspecified</database>
 	</source>
@@ -16,10 +16,10 @@
 		<truncated>Unspecified</truncated>
 		<difficult>Unspecified</difficult>
 		<bndbox>
-			<xmin>172</xmin>
+			<xmin>143</xmin>
 			<ymin>36</ymin>
-			<xmax>232</xmax>
-			<ymax>53</ymax>
+			<xmax>234</xmax>
+			<ymax>55</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -28,10 +28,10 @@
 		<truncated>Unspecified</truncated>
 		<difficult>Unspecified</difficult>
 		<bndbox>
-			<xmin>173</xmin>
-			<ymin>56</ymin>
-			<xmax>235</xmax>
-			<ymax>73</ymax>
+			<xmin>145</xmin>
+			<ymin>53</ymin>
+			<xmax>238</xmax>
+			<ymax>75</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -40,10 +40,10 @@
 		<truncated>Unspecified</truncated>
 		<difficult>Unspecified</difficult>
 		<bndbox>
-			<xmin>172</xmin>
-			<ymin>91</ymin>
-			<xmax>248</xmax>
-			<ymax>106</ymax>
+			<xmin>147</xmin>
+			<ymin>89</ymin>
+			<xmax>249</xmax>
+			<ymax>109</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -52,10 +52,10 @@
 		<truncated>Unspecified</truncated>
 		<difficult>Unspecified</difficult>
 		<bndbox>
-			<xmin>190</xmin>
+			<xmin>147</xmin>
 			<ymin>144</ymin>
-			<xmax>353</xmax>
-			<ymax>160</ymax>
+			<xmax>355</xmax>
+			<ymax>165</ymax>
 		</bndbox>
 	</object>
 	<object>
@@ -64,10 +64,10 @@
 		<truncated>Unspecified</truncated>
 		<difficult>Unspecified</difficult>
 		<bndbox>
-			<xmin>175</xmin>
-			<ymin>210</ymin>
-			<xmax>458</xmax>
-			<ymax>228</ymax>
+			<xmin>149</xmin>
+			<ymin>204</ymin>
+			<xmax>457</xmax>
+			<ymax>232</ymax>
 		</bndbox>
 	</object>
 </annotation>
